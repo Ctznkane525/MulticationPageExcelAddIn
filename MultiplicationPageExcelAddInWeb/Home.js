@@ -41,6 +41,7 @@
             $("#numCols").val(config.cols);
             $("#numMax").val(config.max);
             $("#numMin").val(config.min);
+            $("#selOper").val(config.oper);
         });
     }
 
@@ -63,6 +64,7 @@
         let numCols = parseInt($("#numCols").val());
         let numMax = parseInt($("#numMax").val());
         let numMin = parseInt($("#numMin").val());
+        let operVal = $("#selOper").val();
 
         let getRandomValues = (leadingText) => {
             let subItems = [];
@@ -88,7 +90,7 @@
 
             let subItems = [];
             items.push(getRandomValues(" "));
-            items.push(getRandomValues("*"));
+            items.push(getRandomValues("'" + operVal));
 
             items.push(getBlankValues(""));
             items.push(getBlankValues(""));
