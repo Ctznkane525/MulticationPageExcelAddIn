@@ -42,6 +42,9 @@
             $("#numMax").val(config.max);
             $("#numMin").val(config.min);
             $("#selOper").val(config.oper);
+            //$("#colColor").val(config.color);
+
+            let colorPicker = new JSColor('#colColor', { format: 'hex', alphaChannel: false, value: config.color });
         });
     }
 
@@ -65,6 +68,7 @@
         let numMax = parseInt($("#numMax").val());
         let numMin = parseInt($("#numMin").val());
         let operVal = $("#selOper").val();
+        let color = $("#colColor").val();
 
         let getRandomValues = (leadingText) => {
             let subItems = [];
@@ -106,7 +110,7 @@
 
             var cells = sheet.getRangeByIndexes(0, 0, items.length, numCols);
             cells.values = items;
-            cells.format.font.color = rgbToHex(86, 50, 168);
+            cells.format.font.color = color;//rgbToHex(86, 50, 168);
             cells.format.horizontalAlignment = "Right";
             cells.format.font.size = 16;
             cells.format.columnWidth = 72;

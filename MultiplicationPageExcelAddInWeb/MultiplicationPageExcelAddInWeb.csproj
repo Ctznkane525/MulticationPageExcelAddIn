@@ -131,6 +131,7 @@
     <Content Include="Content\OfficeThemes.css" />
     <Content Include="Scripts\embedded\1.0\visio-web-embedded.debug.js" />
     <Content Include="Scripts\embedded\1.0\visio-web-embedded.js" />
+    <Content Include="Scripts\jscolor.js" />
     <Content Include="Scripts\MessageBanner.js" />
     <Content Include="Scripts\Office\1\access-web-16.00.debug.js" />
     <Content Include="Scripts\Office\1\access-web-16.00.js" />
