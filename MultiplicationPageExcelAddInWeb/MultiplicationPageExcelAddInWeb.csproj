@@ -124,7 +124,9 @@
     <Content Include="Content\sass\mixins\_Animation.Mixins.scss" />
     <Content Include="Content\sass\Fabric.scss" />
     <Content Include="Content\sass\Fabric.Scoped.scss" />
-    <Content Include="config.json" />
+    <Content Include="config.js" />
+    <None Include="Properties\PublishProfiles\MultAddIn.pubxml" />
+    <None Include="Properties\PublishProfiles\MultiplicationPageExcelAddInWeb20210403102430 - Web Deploy.pubxml" />
     <None Include="Scripts\Office\1\outlook-win32.debug-vsdoc.js" />
     <None Include="Scripts\Office\1\office-vsdoc.js" />
     <None Include="Scripts\embedded\1.0\visio-web-embedded.debug-vsdoc.js" />

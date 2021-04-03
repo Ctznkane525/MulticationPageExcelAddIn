@@ -36,7 +36,7 @@
     };
 
     function config() {
-        $.getJSON("config.json").then((config) => {
+        $.getJSON("config.js").then((config) => {
             $("#numRows").val(config.rows);
             $("#numCols").val(config.cols);
             $("#numMax").val(config.max);
