@@ -42,8 +42,9 @@
             $("#numMax").val(config.max);
             $("#numMin").val(config.min);
             $("#selOper").val(config.oper);
-            //$("#colColor").val(config.color);
-
+            $("#numFontSize").val(config.fontSize);
+            $("#numColumnWidth").val(config.columnWidth);
+    
             let colorPicker = new JSColor('#colColor', { format: 'hex', alphaChannel: false, value: config.color });
         });
     }
@@ -52,21 +53,14 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    function componentToHex(c) {
-        var hex = c.toString(16);
-        return hex.length == 1 ? "0" + hex : hex;
-    }
-
-    function rgbToHex(r, g, b) {
-        return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
-    }
-
     function configure() {
 
         let numRows = parseInt($("#numRows").val());
         let numCols = parseInt($("#numCols").val());
         let numMax = parseInt($("#numMax").val());
         let numMin = parseInt($("#numMin").val());
+        let fontSize = parseInt($("#numFontSize").val());
+        let columnWidth = parseInt($("#numColumnWidth").val());
         let operVal = $("#selOper").val();
         let color = $("#colColor").val();
 
@@ -110,10 +104,10 @@
 
             var cells = sheet.getRangeByIndexes(0, 0, items.length, numCols);
             cells.values = items;
-            cells.format.font.color = color;//rgbToHex(86, 50, 168);
+            cells.format.font.color = color;
             cells.format.horizontalAlignment = "Right";
-            cells.format.font.size = 16;
-            cells.format.columnWidth = 72;
+            cells.format.font.size = fontSize;
+            cells.format.columnWidth = columnWidth;
  
             let i = 0;
             for (i = 2; i < items.length; i+=4)
