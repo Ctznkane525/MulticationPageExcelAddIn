@@ -48,6 +48,15 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
+    function componentToHex(c) {
+        var hex = c.toString(16);
+        return hex.length == 1 ? "0" + hex : hex;
+    }
+
+    function rgbToHex(r, g, b) {
+        return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+    }
+
     function configure() {
 
         let numRows = parseInt($("#numRows").val());
@@ -95,7 +104,7 @@
 
             var cells = sheet.getRangeByIndexes(0, 0, items.length, numCols);
             cells.values = items;
-            cells.format.font.color = "purple";
+            cells.format.font.color = rgbToHex(86, 50, 168);
             cells.format.horizontalAlignment = "Right";
             cells.format.font.size = 16;
             cells.format.columnWidth = 72;
